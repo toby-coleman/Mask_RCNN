@@ -61,7 +61,7 @@ DEFAULT_LOGS_DIR = os.path.join(ROOT_DIR, "logs")
 DEFAULT_DATASET_YEAR = "2014"
 
 # Class Ids
-SELECTED_CLASSES = [0, 1, 16, 17] # BG, person, cat, dog
+SELECTED_CLASSES = [1, 16, 17] # person, cat, dog
 
 ############################################################
 #  Configurations
