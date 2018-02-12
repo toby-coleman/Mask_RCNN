@@ -61,7 +61,7 @@ DEFAULT_LOGS_DIR = os.path.join(ROOT_DIR, "logs")
 DEFAULT_DATASET_YEAR = "2014"
 
 # Class Ids
-SELECTED_CLASSES = [0, 1, 16, 17] # BG, person, cat, dog
+SELECTED_CLASSES = [1, 16, 17] # person, cat, dog
 
 ############################################################
 #  Configurations
@@ -469,7 +469,7 @@ if __name__ == '__main__':
 
     # Load weights
     print("Loading weights ", model_path)
-    model.load_weights(model_path, by_name=True)
+    model.load_weights(model_path, by_name=True, exclude=['mrcnn_class_logits', 'mrcnn_bbox_fc', 'mrcnn_bbox', 'mrcnn_mask'])
 
     # Train or evaluate
     if args.command == "train":
